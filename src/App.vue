@@ -1,10 +1,7 @@
 <script>
 
-
-
 import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
-import AppMain from './components/AppMain.vue';
 
 
 export default {
@@ -13,7 +10,6 @@ export default {
         return {};
     },
     components: { 
-      AppMain,
       AppHeader,
       AppFooter,
     }
@@ -24,7 +20,8 @@ export default {
 <template>
   <AppHeader></AppHeader>
   
-  <AppMain></AppMain>
+  <!-- è qui dentro che verrà visualizzato il componente chiamato dal router -->
+  <router-view></router-view>
 
   <AppFooter></AppFooter>
 </template>

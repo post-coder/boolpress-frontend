@@ -1,11 +1,11 @@
 <script>
 
 import axios from 'axios';
+import PostCard from '../components/PostCard.vue';
 
-import PostCard from './PostCard.vue';
 
 export default {
-  name: 'AppMain',
+  name: 'PostsIndex',
 
   data() {
     return {
@@ -35,34 +35,37 @@ export default {
 
   },
 }
+
 </script>
 
 <template>
+  <div class="container py-5">
 
-  <div v-if="posts.length > 0"  class="container pt-5">
-    <h1>Tutti i post del mio blog</h1>
-
-    <hr>
-
-    <div class="row">
-      <div v-for="post in posts" class="col-4 mb-5">
-
-        <PostCard :post="post"></PostCard>
-
+    <div v-if="posts.length > 0"  class="container pt-5">
+      <h1>Tutti i post del mio blog</h1>
+  
+      <hr>
+  
+      <div class="row">
+        <div v-for="post in posts" class="col-4 mb-5">
+  
+          <PostCard :post="post"></PostCard>
+  
+        </div>
       </div>
     </div>
-  </div>
-
-  <div v-else class="loading-screen">
-    <div class="spinner-border" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-  </div>
-
   
+    <div v-else class="loading-screen">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+  </div>
+
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .loading-screen {
     display: flex;
     justify-content: center;
