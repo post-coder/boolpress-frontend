@@ -47,7 +47,11 @@ export default {
       </div>
 
       <p class="card-text"> {{ shortContent }} </p>
-      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+
+      <div class="text-center">
+        <router-link :to="{name: 'posts.show', params: {slug: post.slug}}" class="btn btn-outline-primary">Leggi</router-link>
+
+      </div>
 
     </div>
 

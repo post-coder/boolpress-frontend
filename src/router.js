@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import AppHome from './pages/AppHome.vue';
 import AppAbout from './pages/AppAbout.vue';
 import PostsIndex from './pages/PostsIndex.vue';
+import SinglePost from './pages/SinglePost.vue';
 
 
 const router = createRouter({
@@ -29,6 +30,13 @@ const router = createRouter({
       name: 'posts.index',
       component: PostsIndex,
     },
+
+    // post singolo
+    {
+      path: '/posts/:slug',
+      name: 'posts.show',
+      component: SinglePost,
+    }
     
   ],
 
