@@ -8,19 +8,32 @@ export default {
     data() {
         return {
             post: null,
+            postId: null,
 
             apiBaseUrl: 'http://127.0.0.1:8000/api',
         }
     },
 
     mounted() {
-        // console.log(this.apiBaseUrl + '/posts/2')
+        // come recuperiamo il parametro dell'id del post dall'url?
+        console.log('parametro id della rotta: ', this.$route.params.id);
+        // lo assegnamo alla variabile postId per comodità
+        this.postId = this.$route.params.id;
         
-        axios.get(this.apiBaseUrl + '/posts/2').then(res => {
+        axios.get(this.apiBaseUrl + '/posts/' + this.postId).then(res => {
 
             console.log(res)
 
-            this.post = res.data.post
+            if(res.data.success) {
+                
+                // se troviamo il post lo salviamo
+                this.post = res.data.post
+
+            } else {
+                // altrimenti torniamo alla home
+                this.$router.push({name: 'home'})
+            }
+
 
         })
     },

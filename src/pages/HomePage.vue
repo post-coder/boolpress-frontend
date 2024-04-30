@@ -79,7 +79,7 @@ export default {
 
       <ul>
         <li v-for="post in posts" class="mb-2">
-          {{ post.title }} <router-link :to="{name: 'single-post'}" class="btn btn-outline-info btn-outline">Mostra</router-link>
+          {{ post.title }} <router-link :to="{name: 'single-post', params: {id: post.id}}" class="btn btn-outline-info btn-outline">Mostra</router-link>
         </li>
       </ul>
   
