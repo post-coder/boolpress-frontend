@@ -10,7 +10,7 @@ export default {
 
     <header>
         <nav>
-            <div class="container py-2 mb-5">
+            <div class="container py-2">
                 Boolpress
             </div>
         </nav>
@@ -21,8 +21,8 @@ export default {
 <style lang="scss">
 
 nav {
-    .container {
-        border-bottom: 1px solid white;
-    }
+    border-bottom: 1px solid white;
+    
+    margin-bottom: 1em;
 }
 </style>
