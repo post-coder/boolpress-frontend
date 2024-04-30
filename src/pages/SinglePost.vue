@@ -8,7 +8,7 @@ export default {
     data() {
         return {
             post: null,
-            postId: null,
+            postSlug: null,
 
             apiBaseUrl: 'http://127.0.0.1:8000/api',
         }
@@ -16,11 +16,11 @@ export default {
 
     mounted() {
         // come recuperiamo il parametro dell'id del post dall'url?
-        console.log('parametro id della rotta: ', this.$route.params.id);
-        // lo assegnamo alla variabile postId per comodità
-        this.postId = this.$route.params.id;
+        console.log('parametro id della rotta: ', this.$route.params.slug);
+        // lo assegnamo alla variabile postSlug per comodità
+        this.postSlug = this.$route.params.slug;
         
-        axios.get(this.apiBaseUrl + '/posts/' + this.postId).then(res => {
+        axios.get(this.apiBaseUrl + '/posts/' + this.postSlug).then(res => {
 
             console.log(res)
 

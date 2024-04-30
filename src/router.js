@@ -17,7 +17,7 @@ const router = createRouter({
             component: HomePage
         }, 
         {
-            path: '/posts/:id',
+            path: '/posts/:slug',
             name: 'single-post',
             component: SinglePost
         }
