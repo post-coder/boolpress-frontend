@@ -71,7 +71,7 @@ export default {
 </script>
 
 <template>
-  <div class="">
+  <div class="mb-4">
 
     <h1>I nostri post</h1>
 
@@ -99,7 +99,10 @@ export default {
       </div>
     </div>
 
+
+
   </div>
+
 </template>
 
 <style lang="scss" scoped>
