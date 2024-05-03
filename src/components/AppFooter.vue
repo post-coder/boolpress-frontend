@@ -2,7 +2,9 @@
 export default {
     name: 'AppFooter',
     data() {
-
+        return  {
+            
+        }
     }
 }
 </script>
@@ -11,10 +13,12 @@ export default {
 
 
 <footer>
-    <div class="container ">
+    <div class="container d-flex gap-3">
         <p>
             Copyright (c): 2024 Boolean Classe #118
         </p>
+
+        <router-link :to="{name: 'contact-me'}">Contattami</router-link>
     </div>
 
 </footer>

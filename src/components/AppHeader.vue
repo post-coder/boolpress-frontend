@@ -9,16 +9,23 @@ export default {
 <template>
 
     <header>
-        <nav>
-            <div class="container py-2">
+        <nav class="py-3">
+            <router-link :to="{name: 'home'}" id="boolpress-home-link" class="container py-2">
                 Boolpress
-            </div>
+            </router-link>
         </nav>
     </header>
 
 </template>
 
 <style lang="scss">
+
+#boolpress-home-link {
+    color: white;
+    text-decoration: none;
+
+    font-weight: bold;
+}
 
 nav {
     border-bottom: 1px solid white;
